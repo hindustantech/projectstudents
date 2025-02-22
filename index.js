@@ -4,9 +4,9 @@ import StudentRoute from './Router/StudentRoute.js'
 import cors from 'cors';
 const app = express();
 app.use(cors({
-    origin: '*', // Changed from specific origin to wildcard
+    origin: 'https://frontendproject-chi.vercel.app', // Allow only your frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'] // Added allowed headers
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json()); // ✅ Parses JSON request bodies
 app.use(express.urlencoded({ extended: true })); // ✅ Parses URL-encoded bodies
